@@ -16,14 +16,17 @@
     <link rel="stylesheet" media="all" href="./assets/css/style.css">
     <script src="./assets/js/index.js" defer></script>
   </head>
-  <body>
-    <header class="flex flex-between">
+  <body id="body" class="easeinout">
+    <header class="flex flex-between easeinout">
       <div class="container flex flex-between">
         <div class="title">
          <h1>Temperature Converter</h1>
+        </div>    
+        <div class="hamburger">
+          <a class="fa-solid fa-bars"></a>
         </div>
-          <nav>
-           <ul class="flex flex-between">
+        <nav>
+          <ul class="flex flex-between">
             <li><a class="easeinout" href="">Project</a></li>
             <li><a class="easeinout" href="">About</a></li>
             <li><a class="easeinout" href="">Contact</a></li>
@@ -32,9 +35,8 @@
       </div>
     </header>
     <main>
-
       <div class="form-wrapper flex center">
-        <div class="full-form flex flex-column flex-even align-center">
+        <div class="full-form flex flex-column flex-even align-center easeinout">
           <h2>Temperature Converter</h2>
           <form>
             <div class="flex flex-center">
@@ -53,12 +55,12 @@
             </div>
           </form>
           <div>
-            <p class="result"></p>
+            <p class="result easeinout"></p>
           </div>
         </div>
       </div>
-      <button class="button">
-        <i class="fa-solid fa-moon symbol"></i>
+      <button class="button easeinout">
+        <i id="symbol" class="fa-solid fa-moon easeinout"></i>
       </button>
     </main>
   </body>

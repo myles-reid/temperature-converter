@@ -6,26 +6,98 @@ html {
   font-family: 'Nunito Sans', 'Fira Sans', Arial, sans-serif;
 }
 
+@media screen and (max-width: 550px) {
+  h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+}
+
+.dark-mode {
+    background-color: var(--app-color-dark-bg);
+    color: var(--app-font-color-light);
+
+    header {
+      background-color: #670067;
+
+      a:hover {
+        background-color: rgb(162, 0, 162);
+      }
+    }
+
+    .full-form {
+      background-color: #292e40;
+      box-shadow: 0px 0px 4px rgb(255 255 255 / 18%);
+    }
+
+    input[type=text] {
+      background-color: var(--app-color-dark-bg);
+      color: var(--app-font-color-light);
+      border: 1px solid rgb(255 255 255 / 25%);
+    }
+
+    input[type=text]:focus {
+      border: 1px solid rgb(162 0 162 / 70%)
+    }
+
+    input[type=button] {
+      background-color: #670067;
+    }
+
+    input[type=button]:hover {
+      background-color: #a200a2;
+    }
+
+    .result {
+      color: var(--app-font-color-light);
+      background-color: var(--app-color-dark-bg);
+      box-shadow: 0px 0px 4px rgb(255 255 255 / 18%)
+    }
+
+    .button {
+      background-color: var(--app-color-light-bg);
+      
+    }
+
+    .button:hover{
+      color: #f7b103;
+      background-color: var(--app-color-light-bg);
+      .fa-solid {
+        color: #ffdf00;
+      }
+    }
+
+    .fa-solid{
+      color: #daa520;
+    }
+}
+
 body {
   background-color: var(--app-color-light-bg);
 }
+
+
 /* - - - - - - - - - - - - - - - - */
-/*          Header                 */
+/*          Header      670067     */
 /* - - - - - - - - - - - - - - - - */
 header {
-  background-color: #670067;
+  background-color: #a200a2;
   height: var(--unit-height);
 
-  h1, li {
+  h1, li, .hamburger {
     line-height: var(--unit-height);
-    color: #fff;
+    color: var(--app-font-color-light);
   }
   
   h1 {
     font-size: 2.2rem;
-    font-weight: 700;
-  }
+    font-weight: 600;
+  } 
 }
+
+.hamburger {
+    display: none;
+  }
 
 ul {
   width: 25rem;
@@ -38,11 +110,11 @@ ul {
     a {
       padding: 3px 9px 5px 9px;
       border-radius: 4px;
-      color: #fff;
+      color: var(--app-font-color-light);
     }   
 
     a:hover {
-      background-color: #a200a2;
+      background-color: #d500d5;
     }
   }
 }
@@ -60,12 +132,12 @@ ul {
   width: 400px;
   background-color: #fff;
   border-radius: var(--app-box-radius);
+  box-shadow: var(--app-box-shadow);
 }
 
 .full-form h2 {
   font-size: 24px;
   font-weight: 500;
-  /* margin-bottom: -40px; */
 }
 
 input[type=text] {
@@ -79,19 +151,19 @@ input[type=text] {
 }
 
 input[type=text]:focus {
-  border: 1px solid rgb(103 0 103 / 50%);
+  border: 1px solid rgb(162 0 162 / 50%);
 }
 
 input[type=button] {
   font-size: 15px;
   padding: 6px 17px;
   border-radius: var(--app-box-radius);
-  background-color: #670067;
-  color: white;
+  background-color: #a200a2;
+  color: var(--app-font-color-light);
 }
 
 input[type=button]:hover {
-  background-color: #a200a2;
+  background-color: #d500d5;
 }
 
 .radios {
@@ -108,7 +180,7 @@ input[type=button]:hover {
   padding-left: 8px;
   border-radius: var(--app-box-radius);
   border: 1px solid rgb(0 0 0 / 25%);
-  box-shadow: var(--app-box-shadow);
+  box-shadow: inset var(--app-box-shadow);
 }
 
 
@@ -129,5 +201,37 @@ input[type=button]:hover {
   position: relative;
   top: 2px;
   font-size: 26px;
-  color: #fff;
+  color: var(--app-font-color-light);
 }
+
+.button:hover {
+  background-color: #333;
+}
+
+/* - - - - - - - - - - - - - - - - */
+/*        Media Queries            */
+/* - - - - - - - - - - - - - - - - */
+
+ @media screen and (max-width: 550px) {
+ header{
+  h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 1.8rem;
+  }
+
+  nav {
+    display: none;
+  }
+ }
+  
+}
+
+
+
+
+

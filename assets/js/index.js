@@ -1,6 +1,7 @@
 'use strict';
-// sun class - fa-solid fa-sun
 
+// Connecting all needed elements
+const body = document.querySelector('#body');
 const form = document.querySelector('form');
 const input = document.querySelector('.input');
 const convert = document.querySelector('.convert');
@@ -8,18 +9,9 @@ const toFahrenheit = document.querySelector('#f');
 const toCelsius = document.querySelector('#c');
 const output = document.querySelector('.result');
 const toggle = document.querySelector('.button');
-const styleSymbol = document.querySelector('.symbol');
+const styleSymbol = document.querySelector('#symbol');
 
-
-/*
-  TODO for conversion
-VALIDATE
-  1) Receive input from radio buttons - .checked = t/f
-  2) base on buttons, have the correct formula
-  3) take input from field, use the formula
-  4) print output in empty <p> with input = output
-  5) clear input
-*/
+// Calculations
 let inputSymbol = ' ';
 let resultSymbol = ' ';
 let value = '';
@@ -60,12 +52,18 @@ convert.addEventListener('click', function() {
 });
 
 
+// Style Change functions
+function symbolSwap() {
+  if (styleSymbol.classList.contains('fa-moon') && !styleSymbol.classList.contains('fa-sun')) {
+    styleSymbol.classList.remove('fa-moon');
+    styleSymbol.classList.add('fa-sun');
+  } else {
+    styleSymbol.classList.remove('fa-sun');
+    styleSymbol.classList.add('fa-moon');
+  }
+}
 
-
-
-
-/*
-  TODO for style change
-
-  1)evenListener on click toggle?
-*/
+toggle.addEventListener('click', function() {
+  body.classList.toggle('dark-mode'); 
+  symbolSwap();
+});
