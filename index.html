@@ -6,7 +6,7 @@
     <meta name="author" content="Myles Reid">
     <meta name="description" content="Page elements">
     <meta name="keywords" content="html, CSS, web, seo, web development">
-    <title>******CHANGE ME*******</title>
+    <title>Temperature Converter</title>
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,8 +17,51 @@
     <script src="./assets/js/index.js" defer></script>
   </head>
   <body>
+    <header class="flex flex-between">
+      <div class="container flex flex-between">
+        <div class="title">
+         <h1>Temperature Converter</h1>
+        </div>
+          <nav>
+           <ul class="flex flex-between">
+            <li><a class="easeinout" href="">Project</a></li>
+            <li><a class="easeinout" href="">About</a></li>
+            <li><a class="easeinout" href="">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <main>
 
+      <div class="form-wrapper flex center">
+        <div class="full-form flex flex-column flex-even align-center">
+          <h2>Temperature Converter</h2>
+          <form>
+            <div class="flex flex-center">
+              <input class="input" type="text" placeholder="Temperature...">
+              <input class="convert" type="button" value="Convert">
+            </div>
+            <div class="radios flex flex-even">
+              <div>
+                <input id="f" type="radio" name="temp-scale" value="To Fahrenheit" checked>
+                <label for="f">To Fahrenheit</label>
+              </div>
+              <div>
+                <input id="c" type="radio" name="temp-scale" value="To Celsius">
+                <label for="c">To Celsius</label>
+              </div>
+            </div>
+          </form>
+          <div>
+            <p class="result"></p>
+          </div>
+        </div>
+      </div>
+      <div class="button">
+        <button class="toggle-slider">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </div>
     </main>
   </body>
 </html>
