@@ -79,7 +79,7 @@ input[type=text] {
 }
 
 input[type=text]:focus {
-  border: 1px solid rgb(0 0 0 / 50%);
+  border: 1px solid rgb(103 0 103 / 50%);
 }
 
 input[type=button] {
@@ -90,15 +90,22 @@ input[type=button] {
   color: white;
 }
 
+input[type=button]:hover {
+  background-color: #a200a2;
+}
+
 .radios {
   margin-top: 5px;
 }
 
 .result {
+  font-size: 16px;
   height: 30px;
   width: 260px;
+  line-height: 30px;
   background-color: var(--app-color-light-bg);
   margin-top: -30px;
+  padding-left: 8px;
   border-radius: var(--app-box-radius);
   border: 1px solid rgb(0 0 0 / 25%);
   box-shadow: var(--app-box-shadow);
@@ -109,7 +116,7 @@ input[type=button] {
 /*        Button/toggle            */
 /* - - - - - - - - - - - - - - - - */
 
-.toggle-slider {
+.button {
   position: fixed;
   inset: auto 40px 40px auto;
   width: 60px;
